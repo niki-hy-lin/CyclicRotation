@@ -8,11 +8,8 @@ class Solution {
     public int[] solution(int[] A, int K) {
         // write your code in Java SE 8
         
-        int length=A.length;
-        
-        int remainder=K % length;
-       
-        int[] result = new int[length];
+        int length=A.length;   
+        int[] result = new int[length];//result and A are in the same size
        
         
         if (length == K) {
@@ -25,11 +22,11 @@ class Solution {
         
         for (int i=0; i<length; i++){
             int newK= (i + K) % length;
-            result[newK] = A[i];
+            result[newK] = A[i];//place value of index[i] in index[newK]
             
         }
         
     
-        return result;
+        return result;//always return the type we want
     }
 }
